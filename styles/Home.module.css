@@ -1,0 +1,67 @@
+.main {
+  height: 100vh;
+  width: 100vw;
+  background-color: #222222;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.circle {
+  height: 50px;
+  width: 50px;
+  background-color: #dadada;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.buttons {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5vmin;
+  padding-top: 5vmin;
+}
+
+.buttons button {
+  height: 50px;
+  width: 50px;
+  font-size: 50px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.buttons button:disabled {
+  cursor: not-allowed;
+}
+
+.buttons button .tooltip {
+  visibility: hidden;
+  width: 10vmin;
+  background-color: #161616;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  top: -20px;
+  padding: 5px;
+  transform: translateX(-20%);
+  transition: all 300ms ease;
+  opacity: 0;
+  border-radius: 5px;
+  border: 1px #131313 solid;
+  cursor: auto;
+  display: none;
+}
+
+.buttons button:disabled:hover .tooltip {
+  display: inline-block;
+  visibility: visible;
+  transform: translateX(-20%);
+  opacity: 100;
+}
